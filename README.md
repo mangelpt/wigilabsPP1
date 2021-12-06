@@ -1,9 +1,9 @@
 # Evaluación de conocimientos
-El objetivo de esta prueba es evaluar las capacidades de los candidatos para resolver problemas que se presentan en el desarrollo de una aplicacion.   
+El objetivo de esta prueba es evaluar las capacidades de los candidatos para resolver problemas que se presentan en el desarrollo de una aplicación.   
    
 La prueba consiste en eliminar los **"Warning"** que se presentan en los tests unitarios del proyecto.  
    
-El candidado tiene la libertad de hacer las modificaciones que vea convenientes para resolver el problema, y verificar que el proyecto siga funcionando al finalizar sus cambios.   
+El candidato tiene la libertad de hacer las modificaciones que vea convenientes para resolver el problema, y verificar que el proyecto siga funcionando al finalizar sus cambios.   
    
 El candidato debe mandar el link del repositorio donde resolvio la evaluación.   
    
