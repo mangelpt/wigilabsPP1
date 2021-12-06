@@ -3,7 +3,7 @@ El objetivo de esta prueba es evaluar las capacidades de los candidatos para res
    
 La prueba consiste en eliminar los **"Warning"** que se presentan en los tests unitarios del proyecto.  
    
-El candidado tiene la libertad de hacer las modificaciones que vea comvenientes para resolver el problema, y verificar que el proyecto siga funcionando al finalizar sus cambios.   
+El candidado tiene la libertad de hacer las modificaciones que vea convenientes para resolver el problema, y verificar que el proyecto siga funcionando al finalizar sus cambios.   
    
 El candidato debe mandar el link del repositorio donde resolvio la evaluación.   
    
