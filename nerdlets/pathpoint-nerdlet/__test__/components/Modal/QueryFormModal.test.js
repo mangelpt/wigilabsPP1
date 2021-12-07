@@ -16,7 +16,7 @@ describe('<QueryFormModal/>', () => {
     const resultsTestQuery = { str: 'asd', array: ['asd', 'ter'] };
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           selectedCase: 0,
           datos: [
@@ -34,7 +34,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
-        testText="Bad query"
+        testText='Bad query'
         resultsTestQuery={resultsTestQuery}
         goodQuery={false}
         modifiedQuery
@@ -48,7 +48,7 @@ describe('<QueryFormModal/>', () => {
   it('Render body with good query true', () => {
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -64,7 +64,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}
@@ -79,7 +79,7 @@ describe('<QueryFormModal/>', () => {
     const testQuery = jest.fn();
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -95,7 +95,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={testQuery}
         handleSaveUpdateQuery={jest.fn()}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}
@@ -114,7 +114,7 @@ describe('<QueryFormModal/>', () => {
     const sampleQuery = jest.fn();
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -130,7 +130,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={sampleQuery}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}
@@ -170,7 +170,7 @@ describe('<QueryFormModal/>', () => {
     const handleSaveUpdateQuery = jest.fn();
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -186,7 +186,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={handleSaveUpdateQuery}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}
@@ -203,7 +203,7 @@ describe('<QueryFormModal/>', () => {
     const handleChangeTexarea = jest.fn();
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -219,7 +219,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}
@@ -237,7 +237,7 @@ describe('<QueryFormModal/>', () => {
     const handleOnChange = jest.fn();
     const bodyQueryForm = mount(
       <BodyQueryFormModal
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           datos: [
             {
@@ -254,7 +254,7 @@ describe('<QueryFormModal/>', () => {
         chargueSample={jest.fn()}
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
-        testText="good query"
+        testText='good query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery
         modifiedQuery={false}

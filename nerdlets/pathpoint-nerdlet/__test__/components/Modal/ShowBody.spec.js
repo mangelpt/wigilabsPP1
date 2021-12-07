@@ -25,7 +25,7 @@ describe('ShowBody component', () => {
   test('ShowBody with default data in 0 view', () => {
     const body = create(
       <ShowBody
-        querySample="simple query"
+        querySample='simple query'
         stageNameSelected={{
           selectedCase: 0,
           datos: [
@@ -43,13 +43,13 @@ describe('ShowBody component', () => {
         testQuery={jest.fn()}
         handleSaveUpdateQuery={jest.fn()}
         handleSaveUpdateSupport={jest.fn()}
-        testText="Bad query"
+        testText='Bad query'
         resultsTestQuery={{ type: 'default' }}
         goodQuery={false}
         modifiedQuery
         handleChangeTexarea={jest.fn()}
         viewModal={1}
-        width="230px"
+        width='230px'
         handleSaveUpdateTune={jest.fn()}
         _onClose={jest.fn()}
         LogoFormSubmit={jest.fn()}
