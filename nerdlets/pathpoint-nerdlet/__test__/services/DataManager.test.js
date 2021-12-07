@@ -131,7 +131,7 @@ jest.mock(
                                   measure_time: '15 minutes ago',
                                   min_count: 10,
                                   query:
-                                    "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                                    'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                                   session_count: 17699,
                                   timeout: 10,
                                   type: 'PRC'
@@ -286,7 +286,8 @@ jest.mock(
       setConfig: jest.fn()
     };
     const logger = {
-      log: () => {}
+      log: () => {
+      }
     };
     const UserQuery = {
       query: jest.fn().mockReturnValue({
@@ -329,7 +330,7 @@ describe('Datamanager service', () => {
                 type: 'PRC',
                 timeout: 10,
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                 min_count: 10,
                 session_count: 0,
                 measure_time: '15 minutes ago',
@@ -705,7 +706,7 @@ describe('Datamanager service', () => {
         queryByCity: [
           {
             query:
-              "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='ap-southeast-2'",
+              'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'ap-southeast-2\'',
             link: 'https://newrelic.one'
           }
         ],
@@ -994,7 +995,7 @@ describe('Datamanager service', () => {
         queryByCity: [
           {
             query:
-              "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='ap-southeast-2'"
+              'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'ap-southeast-2\''
           }
         ],
         shortName: 'Unique',
@@ -1079,7 +1080,7 @@ describe('Datamanager service', () => {
 
   it('Function ReadQueryResults()', async () => {
     const query =
-      "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'";
+      'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'';
     const accountID = 2710112;
     dataManager.NRDBQuery = jest.fn();
     const result = await dataManager.ReadQueryResults(query, accountID);
@@ -1091,7 +1092,7 @@ describe('Datamanager service', () => {
       type: 'PRC',
       timeout: 10,
       query:
-        "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+        'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
       min_count: 10,
       session_count: 0,
       measure_time: '15 minutes ago',
@@ -1106,13 +1107,13 @@ describe('Datamanager service', () => {
           type: 'PRC',
           timeout: 10,
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
           min_count: 10,
           session_count: 0,
           measure_time: '15 minutes ago',
           accountID: 2710112
         },
-        "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue' SINCE 15 minutes ago",
+        'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\' SINCE 15 minutes ago',
         'TIME 5 HOURS AGO'
       ]
     ]);
@@ -1123,7 +1124,7 @@ describe('Datamanager service', () => {
       type: 'WLD',
       timeout: 10,
       query:
-        "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+        'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
       min_count: 10,
       session_count: 0,
       accountID: 2710112
@@ -1137,13 +1138,13 @@ describe('Datamanager service', () => {
           type: 'WLD',
           timeout: 10,
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
           min_count: 10,
           session_count: 0,
           accountID: 2710112,
           status_value: 'NO-VALUE'
         },
-        "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue' SINCE 3 HOURS AGO",
+        'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\' SINCE 3 HOURS AGO',
         'TIME 5 HOURS AGO'
       ]
     ]);
@@ -1204,7 +1205,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1232,7 +1233,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'kpi',
@@ -1280,7 +1281,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1329,13 +1330,13 @@ describe('Datamanager service', () => {
             {
               accountID: 2710112,
               query:
-                "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='ap-southeast-2'"
+                'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'ap-southeast-2\''
             }
           ]
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'kpi',
@@ -1450,7 +1451,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1501,7 +1502,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1554,7 +1555,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1607,7 +1608,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1653,7 +1654,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1697,7 +1698,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1741,7 +1742,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1798,7 +1799,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1855,7 +1856,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1906,7 +1907,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1947,7 +1948,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -1988,7 +1989,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2029,7 +2030,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2066,7 +2067,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2103,7 +2104,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2160,7 +2161,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2194,7 +2195,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2231,7 +2232,7 @@ describe('Datamanager service', () => {
         },
         {
           query:
-            "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+            'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
         },
         {
           measureType: 'touchpoint',
@@ -2277,10 +2278,10 @@ describe('Datamanager service', () => {
 
   it('Function escapeQuote()', () => {
     const data =
-      "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'";
+      'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'';
     const result = dataManager.escapeQuote(data);
     expect(result).toEqual(
-      "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+      'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
     );
   });
 
@@ -2457,7 +2458,7 @@ describe('Datamanager service', () => {
             {
               type: 'PRC',
               query:
-                "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
               min_count: 10,
               session_count: 20,
               accountID: 2904070,
@@ -2466,7 +2467,7 @@ describe('Datamanager service', () => {
             {
               type: 'PCC',
               query:
-                "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
               min_count: 10,
               transaction_count: 20,
               accountID: 2904070,
@@ -2475,7 +2476,7 @@ describe('Datamanager service', () => {
             {
               type: 'WLD',
               query:
-                "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
               status_value: true
             }
           ]
@@ -3148,7 +3149,7 @@ describe('Datamanager service', () => {
                 timeout: 10,
                 type: 'PRC',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                 min_count: 10
               }
             ]
@@ -3162,7 +3163,7 @@ describe('Datamanager service', () => {
         type: 'PRC-COUNT-QUERY',
         accountID: 7777777,
         query:
-          "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+          'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
         query_timeout: 10,
         min_count: 10,
         measure_time: '15 minutes ago'
@@ -3189,7 +3190,7 @@ describe('Datamanager service', () => {
                 timeout: 10,
                 type: 'PCC',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                 min_count: 10
               },
               {
@@ -3200,14 +3201,14 @@ describe('Datamanager service', () => {
                 max_error_percentage: 0.7,
                 type: 'APP',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
               },
               {
                 measure_time: '15 minutes ago',
                 accountID: 7777777,
                 type: 'FRT',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                 min_apdex: 0.5,
                 max_response_time: 0.3,
                 max_error_percentage: 0.7
@@ -3218,7 +3219,7 @@ describe('Datamanager service', () => {
                 timeout: 10,
                 type: 'SYN',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
                 max_avg_response_time: 0.9,
                 max_total_check_time: 20,
                 min_success_percentage: 25
@@ -3229,7 +3230,7 @@ describe('Datamanager service', () => {
                 timeout: 10,
                 type: 'WLD',
                 query:
-                  "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'"
+                  'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\''
               }
             ]
           }
@@ -3241,7 +3242,7 @@ describe('Datamanager service', () => {
       type: 'PCC-COUNT-QUERY',
       accountID: 7777777,
       query:
-        "SELECT count(*) as session FROM Public_APICall WHERE awsRegion='queue'",
+        'SELECT count(*) as session FROM Public_APICall WHERE awsRegion=\'queue\'',
       query_timeout: 10,
       min_count: 10,
       measure_time: '15 minutes ago'
