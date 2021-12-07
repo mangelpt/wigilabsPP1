@@ -23,7 +23,8 @@ describe('<BackgroundProcessesFormModal/>', () => {
   });
 
   it('Function getFireSyntheticFilter', () => {
-    const close = () => {};
+    const close = () => {
+    };
     const cb = () => {
       return 0;
     };
