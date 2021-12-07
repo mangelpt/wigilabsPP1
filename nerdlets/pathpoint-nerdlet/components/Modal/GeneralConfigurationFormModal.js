@@ -10,8 +10,8 @@ function HeaderGeneralConfigurationFormModal() {
   return (
     <>
       <div style={{ display: 'flex' }}>
-        <div className="titleModal">
-          <img src={setup} width="18" /> Credentials and General Configuration
+        <div className='titleModal'>
+          <img src={setup} width='18' /> Credentials and General Configuration
         </div>
       </div>
     </>
@@ -40,10 +40,10 @@ function BodyGeneralConfigurationFormModal(props) {
   return (
     <div style={{ width: '400px', paddingTop: '20px' }}>
       <Form onSubmit={handleFormSubmit}>
-        <FormGroup controlId="accountId">
+        <FormGroup controlId='accountId'>
           <label style={{ margin: '0px' }}>Account ID</label>
           <SelectIDs
-            name="accountId"
+            name='accountId'
             handleOnChange={handleOnChange}
             options={datos.accountIDs}
             idSeleccionado={
@@ -53,13 +53,13 @@ function BodyGeneralConfigurationFormModal(props) {
             }
           />
         </FormGroup>
-        <FormGroup controlId="ingestLicense">
+        <FormGroup controlId='ingestLicense'>
           <label style={{ margin: '0px' }}>Ingest License</label>
           <FormControl
-            name="ingestLicense"
-            type="text"
-            placeholder="Type your ingest license"
-            bsClass="support-modal-input-text"
+            name='ingestLicense'
+            type='text'
+            placeholder='Type your ingest license'
+            bsClass='support-modal-input-text'
             value={props.credentialsData.ingestLicense}
             // onPaste={e => e.preventDefault()}
             onFocus={() => ToggleEnableSubmit(true)}
@@ -80,13 +80,13 @@ function BodyGeneralConfigurationFormModal(props) {
             </span>
           )}
         </FormGroup>
-        <FormGroup controlId="userAPIKey">
+        <FormGroup controlId='userAPIKey'>
           <label style={{ margin: '0px' }}>User API Key</label>
           <FormControl
-            name="userAPIKey"
-            type="text"
-            placeholder="Type your User API Key"
-            bsClass="support-modal-input-text"
+            name='userAPIKey'
+            type='text'
+            placeholder='Type your User API Key'
+            bsClass='support-modal-input-text'
             value={props.credentialsData.userAPIKey}
             onFocus={() => ToggleEnableSubmit(true)}
             // onPaste={e => e.preventDefault()}
@@ -106,8 +106,8 @@ function BodyGeneralConfigurationFormModal(props) {
           )}
           <div style={{ marginTop: '25px' }}>
             <input
-              id="logginCheck"
-              type="checkbox"
+              id='logginCheck'
+              type='checkbox'
               value={
                 datos.credentials.loggin ? datos.credentials.loggin : false
               }
@@ -125,12 +125,12 @@ function BodyGeneralConfigurationFormModal(props) {
                 })
               }
             />
-            <label className="label-checkbox"> Enable Pathpoint Logging </label>
+            <label className='label-checkbox'> Enable Pathpoint Logging </label>
           </div>
           <div style={{ marginTop: '10px' }}>
             <input
-              id="flameToolsCheck"
-              type="checkbox"
+              id='flameToolsCheck'
+              type='checkbox'
               value={
                 datos.credentials.flameTools
                   ? datos.credentials.flameTools
@@ -152,14 +152,14 @@ function BodyGeneralConfigurationFormModal(props) {
                 })
               }
             />
-            <label className="label-checkbox">
+            <label className='label-checkbox'>
               Enable Flame Filter Background Script
             </label>
           </div>
           <div style={{ marginTop: '10px' }}>
             <input
-              type="checkbox"
-              id="dropToolsCheck"
+              type='checkbox'
+              id='dropToolsCheck'
               value={
                 datos.credentials.dropTools
                   ? datos.credentials.dropTools
@@ -181,7 +181,7 @@ function BodyGeneralConfigurationFormModal(props) {
                 })
               }
             />
-            <label className="label-checkbox">
+            <label className='label-checkbox'>
               Enable Drop Filter Background Script
             </label>
           </div>
@@ -205,7 +205,7 @@ function BodyGeneralConfigurationFormModal(props) {
             </Button>
 
             <Button
-              variant="outline-danger"
+              variant='outline-danger'
               onClick={resetCredentials}
               style={{
                 marginRight: '20px'
@@ -214,9 +214,9 @@ function BodyGeneralConfigurationFormModal(props) {
               Reset Credentials
             </Button>
             <Button
-              type="submit"
-              variant="contained"
-              color="primary"
+              type='submit'
+              variant='contained'
+              color='primary'
               disabled={
                 disableGeneralConfigurationSubmit ||
                 licenseValidations.ingestLicense === false ||
@@ -242,12 +242,12 @@ BodyGeneralConfigurationFormModal.propTypes = {
   handleFormSubmit: PropTypes.func.isRequired,
   credentialsData: PropTypes.object.isRequired,
   resetCredentials: PropTypes.func.isRequired,
-  ValidateIngestLicense: PropTypes.func.isRequired,
+  ValidateIngestLicense: PropTypes.func,
   licenseValidations: PropTypes.object.isRequired,
-  ValidateUserApiKey: PropTypes.func.isRequired,
-  ToggleEnableSubmit: PropTypes.func.isRequired,
-  disableGeneralConfigurationSubmit: PropTypes.object.isRequired,
-  installUpdateBackgroundScripts: PropTypes.func.isRequired
+  ValidateUserApiKey: PropTypes.func,
+  ToggleEnableSubmit: PropTypes.func,
+  disableGeneralConfigurationSubmit: PropTypes.object,
+  installUpdateBackgroundScripts: PropTypes.func
 };
 
 export {
