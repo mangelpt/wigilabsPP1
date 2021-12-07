@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # wigilabsPP1
 evaluation wigilabs
 =======
@@ -38,4 +38,3 @@ nr1 nerdpack:serve
 
 Visit [https://one.newrelic.com/?nerdpacks=local](https://one.newrelic.com/?nerdpacks=local), navigate to the Nerdpack, and test it.
 
->>>>>>> master
