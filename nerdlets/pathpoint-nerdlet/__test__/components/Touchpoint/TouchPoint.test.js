@@ -491,7 +491,7 @@ describe('<Touchpoint/>', () => {
   });
 
   it('Simulate click', () => {
-    window.open = jest.fn();
+    global.open = jest.fn();
     const touchPoint = {
       status_on_off: false,
       city: 0,

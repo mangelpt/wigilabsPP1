@@ -7,15 +7,15 @@ const Workload = ({ workloadWidth, workloadValue }) => {
   for (let i = 1; i <= 4; i++) {
     const pathWorkload = `M ${arrowHead * i + (i - 1) * workloadWidth} 0 L ${i *
     workloadWidth +
-      arrowHead * i} 0 L ${i * workloadWidth + arrowHead * (i - 1)} 13 L ${((i -
-        1) *
-      workloadWidth +
-      arrowHead * (i - 1))} 13 Z`;
+      arrowHead * i} 0 L ${i * workloadWidth + arrowHead * (i - 1)} 13 L ${(i -
+      1) *
+    workloadWidth +
+    arrowHead * (i - 1) +
+    0} 13 Z`;
     arrayPath.push(pathWorkload);
   }
   return (
     <svg
-      key={Math.random() * (100 - 1) + 1}
       fill="#ff0000"
       height="100%"
       width="100%"

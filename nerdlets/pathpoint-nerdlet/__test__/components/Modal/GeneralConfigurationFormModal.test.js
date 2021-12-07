@@ -9,6 +9,7 @@ const credentialsData = {
   ingestLicense: true,
   userAPIKey: true
 };
+
 describe('<GeneralConfigurationFormModal/>', () => {
   it('Render HeaderGeneralConfigurationFormModal', () => {
     const component = shallow(<HeaderGeneralConfigurationFormModal />);
@@ -17,7 +18,6 @@ describe('<GeneralConfigurationFormModal/>', () => {
 
   it('Render BodyGeneralConfigurationFormModal', () => {
     const toggleEnableSubmit = jest.fn();
-
     const component = shallow(
       <BodyGeneralConfigurationFormModal
         stageNameSelected={{
