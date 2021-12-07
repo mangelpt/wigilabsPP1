@@ -7,9 +7,9 @@ describe('<Select/>', () => {
     const wrapper = mount(
       <Select
         options={[{ label: 'option one' }]}
-        name=""
+        name=''
         handleOnChange={jest.fn()}
-        width="230px"
+        width='230px'
       />
     );
     expect(wrapper.length).toEqual(1);
@@ -20,9 +20,9 @@ describe('<Select/>', () => {
     const wrapper = mount(
       <Select
         options={[{ label: 'option one' }]}
-        name=""
+        name=''
         handleOnChange={jest.fn()}
-        width="230px"
+        width='230px'
       />
     );
     wrapper.instance().clickAction();
@@ -34,9 +34,9 @@ describe('<Select/>', () => {
     const wrapper = mount(
       <Select
         options={[{ label: 'option one' }, { label: 'option two' }]}
-        name=""
+        name=''
         handleOnChange={handleOnChange}
-        width="230px"
+        width='230px'
       />
     );
     wrapper.instance().clickSelected(1, { value: 1 });
@@ -48,9 +48,9 @@ describe('<Select/>', () => {
     const wrapper = mount(
       <Select
         options={[{ label: 'option one' }]}
-        name=""
+        name=''
         handleOnChange={jest.fn()}
-        width="230px"
+        width='230px'
       />
     );
     wrapper

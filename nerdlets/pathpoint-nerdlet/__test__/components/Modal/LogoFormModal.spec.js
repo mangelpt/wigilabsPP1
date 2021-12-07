@@ -13,7 +13,7 @@ describe('LogoFormModal component', () => {
         _onClose={jest.fn()}
         handleOnChange={jest.fn()}
         handleSubmitLogo={jest.fn()}
-        type="default"
+        type='default'
       />
     );
     expect(body.toJSON()).toMatchSnapshot();
